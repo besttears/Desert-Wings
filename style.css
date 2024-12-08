@@ -19,6 +19,7 @@ ul {
             padding: 0;
             display: flex;
             gap: 10px;
+  background: #cba560;
         }
         a {
             text-decoration: none;
