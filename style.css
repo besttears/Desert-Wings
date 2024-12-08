@@ -1,0 +1,26 @@
+body {
+  margin: 20px;
+  text-align: center;
+  color: #230A11;
+  height: 00px;
+  width: auto;
+  background: #FEFEDC;
+  border: 2px solid;
+  text-size-adjust: auto;
+}
+button {
+  background: #76AD9B;
+  border: 1px solid;
+
+}
+
+a {
+  color: black;
+}
+ul {
+  background: #D6AD6B;
+  padding: 8px;
+  list-style-type: none;
+}
+
+          
