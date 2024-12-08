@@ -6,7 +6,32 @@
     <title>Desert Wings Home</title>
   <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
+    <style>
+  #title 
+  {
+    position:relative;
+    top: 50px;
+    z-index: 1;
+  }
+    #container 
+    {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      background: white;
+      opacity: 0;
+      z-index: -1;
+    }
+    #element
+    {
+      position: absolute;
+      width: 0px;
+      height: 40px;
+      background: #76AD9B;
+      z-index: 0;
+    }
+  </style>
+<body onload = "move()">
   <ul>
   <a href="home.html">Home</a>
   <a href="events.html">Events</a>
@@ -14,12 +39,32 @@
   <a href="match updates.html">Match Updates</a>
   <a href="Lisencing.html">Liscensing</a>
 </ul>
-    <h1>
+    <h1 id="title">
         Desert Wings
   </h1>
+    <div id="container">
+        <div id="element"></div>
+      </div>
+    <div
+        <img src="mni.png" alt="drone" style = "position:absolute;width: 40px;height: 40px;z-index: 0;left: 0%;top: 100px;">
     <p>
         An organization for everything to do with drone racing <br />
         <a href="https://youtu.be/G9y3DQM_6Bc ">Learn More</a>
     </p>
 </body>
+    <script>
+    function move() {
+  const element = document.getElementById("element");   
+  let width = 0;
+  const id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      element.style.width = width + '%'; 
+    }
+  }
+}
+  </script>
 </html>
