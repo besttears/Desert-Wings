@@ -1,68 +1,76 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Desert Wings Home</title>
-  <link rel="stylesheet" href="style.css"> 
-</head>
+    <link rel="stylesheet" href="style.css"> 
     <style>
-  #title 
-  {
-    position:relative;
-    top: 50px;
-    z-index: 1;
-  }
-    #container 
-    {
-      position: relative;
-      width: 100%;
-      height: 40px;
-      background: white;
-      opacity: 0;
-      z-index: -1;
-    }
-    #element
-    {
-      position: absolute;
-      width: 0px;
-      height: 40px;
-      background: #76AD9B;
-      z-index: 0;
-    }
-  </style>
-<body onload = "move()">
-  <ul>
-  <a href="home.html">Home</a>
-  <a href="events.html">Events</a>
-  <a href="tickets.html">Tickets</a>
-  <a href="match updates.html">Match Updates</a>
-  <a href="Lisencing.html">Liscensing</a>
-</ul>
-    <h1 id="title">
-        Desert Wings
-  </h1>
+        #title {
+            position: relative;
+            top: 50px;
+            z-index: 1;
+        }
+        #container {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            background: white;
+            opacity: 1; /* Changed from 0 to make the container visible */
+            z-index: 0; /* Changed z-index to 0 */
+        }
+        #element {
+            position: absolute;
+            width: 0;
+            height: 40px;
+            background: #76AD9B;
+            z-index: 1; /* Added z-index to ensure the element appears above the container */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body onload="move()">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+        <li><a href="match updates.html">Match Updates</a></li>
+        <li><a href="Licensing.html">Licensing</a></li>
+    </ul>
+    
+    <h1 id="title">Desert Wings</h1>
+    
     <div id="container">
         <div id="element"></div>
-      </div>
+    </div>
+    
     <p>
         An organization for everything to do with drone racing <br />
-        <a href="https://youtu.be/G9y3DQM_6Bc ">Learn More</a>
+        <a href="https://youtu.be/G9y3DQM_6Bc">Learn More</a>
     </p>
-</body>
+    
     <script>
-    function move() {
-  const element = document.getElementById("element");   
-  let width = 0;
-  const id = setInterval(frame, 10);
-  function frame() {
-    if (width == 100) {
-      clearInterval(id);
-    } else {
-      width++; 
-      element.style.width = width + '%'; 
-    }
-  }
-}
-  </script>
+        function move() {
+            const element = document.getElementById("element");
+            let width = 0;
+            const id = setInterval(frame, 10);
+            function frame() {
+                if (width === 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    element.style.width = width + '%';
+                }
+            }
+        }
+    </script>
+</body>
 </html>
