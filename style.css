@@ -14,13 +14,15 @@ button {
 
 }
 
-a {
-  color: black;
-}
 ul {
-  background: #D6AD6B;
-  padding: 8px;
-  list-style-type: none;
-}
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
 
           
