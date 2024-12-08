@@ -9,8 +9,9 @@ body {
   text-size-adjust: auto;
 }
 button {
+  height: 40px;
+  width: 40px;
   background: #76AD9B;
-  border: 1px solid;
 
 }
 
